@@ -1,0 +1,74 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/eck\/entity\/preparedness_info\/10?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/preparedness_info\/preparedness_level"
+        }
+    },
+    "id": [
+        {
+            "value": 10
+        }
+    ],
+    "uuid": [
+        {
+            "value": "aa50ed2a-3df4-42f5-b374-4a8a2ef884ec"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "preparedness_level"
+        }
+    ],
+    "title": [
+        {
+            "value": "Southern California (OSCC)",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1508775824,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_level": [
+        {
+            "value": 4
+        }
+    ],
+    "field_lookup": [
+        {
+            "value": "OSCC"
+        }
+    ],
+    "field_short_code": [
+        {
+            "value": "oscc"
+        }
+    ],
+    "field_url": [
+        {
+            "value": "https:\/\/gacc.nifc.gov\/oscc\/"
+        }
+    ],
+    "field_weight": [
+        {
+            "value": 0
+        }
+    ]
+}

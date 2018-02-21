@@ -1,0 +1,28 @@
+<?php
+
+function gacc_c_theme_preprocess_block__menu_block(&$variables) {
+  if ($variables['elements']['#id'] == 'left_navigation' && !empty($variables['elements']['content']['#items'])) {
+    $link = $this->menuActiveTrail->getActiveLink();
+
+    if(!empty($link->getParent())) {
+    $parent_link = Drupal::service('plugin.manager.menu.link')->createInstance($link->getParent());
+    $menu_item = MenuLinkContent::load($parent_link->getMetaData()['entity_id']);
+    }
+  }
+}
+
+function gacc_c_theme_preprocess(&$variables){
+  $config = \Drupal::config('gacc_settings.settings');
+  $shortCode = $config->get('gacc_code');
+  $twitter = $config->get('gacc_twitter');
+  $bgFid = $config->get('gacc_background');
+  $file = \Drupal\file\Entity\File::load(reset($bgFid));
+
+  $variables['shortcode'] = $shortCode;
+  $variables['twittername'] = $twitter;
+  if($file){
+      $uri = $file->getFileUri();
+      $path = file_create_url($uri);
+      $variables['background'] = $path;
+  }
+}

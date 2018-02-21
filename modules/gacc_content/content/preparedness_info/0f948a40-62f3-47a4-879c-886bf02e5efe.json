@@ -1,0 +1,74 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/eck\/entity\/preparedness_info\/2?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/preparedness_info\/preparedness_level"
+        }
+    },
+    "id": [
+        {
+            "value": 2
+        }
+    ],
+    "uuid": [
+        {
+            "value": "0f948a40-62f3-47a4-879c-886bf02e5efe"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "preparedness_level"
+        }
+    ],
+    "title": [
+        {
+            "value": "Alaska (AICC)",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1508775734,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_level": [
+        {
+            "value": 1
+        }
+    ],
+    "field_lookup": [
+        {
+            "value": "ACC"
+        }
+    ],
+    "field_short_code": [
+        {
+            "value": "aicc"
+        }
+    ],
+    "field_url": [
+        {
+            "value": "https:\/\/fire.ak.blm.gov\/"
+        }
+    ],
+    "field_weight": [
+        {
+            "value": 0
+        }
+    ]
+}

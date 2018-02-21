@@ -1,0 +1,84 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/eck\/entity\/footer_logos\/6?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/footer_logos\/footer_logo"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/footer_logos\/footer_logo\/field_footer_logo": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2017-08\/National%20Association%20of%20State%20Foresters.png"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 6
+        }
+    ],
+    "uuid": [
+        {
+            "value": "5f0ffffe-b010-44ad-9971-3723e4578e1c"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "footer_logo"
+        }
+    ],
+    "title": [
+        {
+            "value": "National Association of State Foresters",
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/footer_logos\/footer_logo\/field_footer_logo": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2017-08\/National%20Association%20of%20State%20Foresters.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "60b4fd03-9616-40e6-b2e5-7fe0e8f85285"
+                    }
+                ],
+                "uri": [
+                    {
+                        "value": "http:\/\/default\/sites\/default\/files\/2017-08\/National%20Association%20of%20State%20Foresters.png"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_footer_logo_link": [
+        {
+            "uri": "http:\/\/www.stateforesters.org\/",
+            "title": "",
+            "options": []
+        }
+    ],
+    "field_weight": [
+        {
+            "value": 6
+        }
+    ]
+}

@@ -1,0 +1,101 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/9?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/footer_block"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/footer_block\/field_icon": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2017-08\/report_2.png"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 9
+        }
+    ],
+    "uuid": [
+        {
+            "value": "6c6e9f21-390e-4f1d-b045-029a613f0a89"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 9
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "footer_block"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1503033952,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1503033948
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Produced by the National Interagency Coordination Center (NICC), the IMSR details wildland fire activity to include changes in activity, resources assigned, costs, etc... &nbsp;<\/p>\r\n",
+            "format": "full_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/footer_block\/field_icon": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2017-08\/report_2.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "36a9f7e8-c4c8-4500-9a76-b51268f48147"
+                    }
+                ],
+                "uri": [
+                    {
+                        "value": "http:\/\/default\/sites\/default\/files\/2017-08\/report_2.png"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_title": [
+        {
+            "value": "National Incident Management Situation Report (IMSR)"
+        }
+    ]
+}

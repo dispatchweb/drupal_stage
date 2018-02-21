@@ -1,0 +1,8 @@
+aside.layout-sidebar {
+  @include breakpoint($bp-medium, $no-query: '.no-mq') {
+    @include grid-span(4,1);
+  }
+  @include breakpoint($bp-large, $no-query: '.no-mq') {
+    @include grid-span(3,1);
+  }
+}

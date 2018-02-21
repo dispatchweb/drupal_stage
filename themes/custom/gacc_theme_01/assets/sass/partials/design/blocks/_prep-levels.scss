@@ -1,0 +1,103 @@
+.national-and-gacc-preparedness-levels-block {
+    width: 350px;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #F3F9F1;
+    padding: 1rem 1rem 1rem 1.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    @include clearfix;
+    border-radius: 3px;
+    h3 {
+        margin: 0 0 .8rem 0;
+        color: #272727; // Secondary color
+        text-transform: uppercase;
+    }
+    h4 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 1.2em;
+    }
+    p {
+        margin-bottom: 1rem;
+        color: #595959;
+        font-style: italic;
+        font-size: .8em;
+    }
+}
+
+
+// .nation-prep-level {
+//     width: 350px;
+//     margin: 0 auto 1rem auto;
+//     background-color: #F3F9F1;
+//     padding: 1rem;
+//     background: #56A87E;
+//     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+//     font-size: 13px;
+//     color: #FFFFFF;
+//     border-radius: 3px;
+//     h3 {
+//         margin: 0;
+//         color: #FFFFFF;
+//     }
+//     p {
+//         margin-bottom: 0;
+//         color: #FFFFFF;
+//         font: 400 90%/1.55 "usual", Helvetica, Arial, sans-serif;
+//     }
+// }
+.nation-prep-levels {
+    width: 350px;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #F3F9F1;
+    padding: 1rem 1rem 1.5rem 1rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    @include clearfix;
+    border-radius: 3px;
+    h4 {
+        margin: 0;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+    .menu__list {
+        padding: 0;
+        clear: both;
+        a {
+          position: relative;
+          z-index: 1;
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+      .menu__row {
+        border-bottom: 1px solid #B5ABAB; 
+        position: relative;
+        float: left;
+        line-height: 1.2em;  
+        margin: -.9em 0 0 0;  
+        width: 100%;
+        text-align: left;
+        font-weight: 600;  
+      }
+      .menu__title {
+        padding-right: 3em;
+        display: block;
+        span {
+          margin:0;
+          position:relative;
+          top: 1.6em;
+          padding-right:5px; 
+          background-color: #F3F9F1;
+        }
+      }
+      .menu__data {  
+          padding:1px 0 1px 5px;
+          position:relative;
+          top:.4em;
+          left:1px;
+          float:right;
+          background-color: #F3F9F1;
+      }
+
+}

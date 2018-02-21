@@ -1,0 +1,28 @@
+fieldset {
+  border-radius: 4px;
+  padding: 1em 1em;
+  border: 1px solid #bdbdbd;
+  position: relative;
+  margin: 1em 0;
+  legend {
+    position: absolute;
+  }
+  .fieldset-legend {
+    font-weight: 700;
+    font-size: 110%;
+    a {
+      text-decoration: none;
+    }
+  }
+  .fieldset-wrapper {
+    padding-top: 2em;
+    padding-left: 2em;
+  }
+}
+
+html.js fieldset.collapsed .fieldset-legend {
+  background-position: 0px 50%;
+}
+html.js fieldset.collapsible .fieldset-legend {
+  background-position: 0px 55%;
+}

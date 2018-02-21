@@ -1,0 +1,84 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/eck\/entity\/footer_logos\/4?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/footer_logos\/footer_logo"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/footer_logos\/footer_logo\/field_footer_logo": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2017-08\/U.S.%20Fish%20and%20Wildlife%20Service.png"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 4
+        }
+    ],
+    "uuid": [
+        {
+            "value": "c88149d5-0ce2-4acc-a40d-84a27047e7da"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "footer_logo"
+        }
+    ],
+    "title": [
+        {
+            "value": "U.S. Fish and Wildlife Service",
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/footer_logos\/footer_logo\/field_footer_logo": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2017-08\/U.S.%20Fish%20and%20Wildlife%20Service.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ea57c656-42bf-463e-a824-c6cae1499970"
+                    }
+                ],
+                "uri": [
+                    {
+                        "value": "http:\/\/default\/sites\/default\/files\/2017-08\/U.S.%20Fish%20and%20Wildlife%20Service.png"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_footer_logo_link": [
+        {
+            "uri": "https:\/\/www.fws.gov\/",
+            "title": "",
+            "options": []
+        }
+    ],
+    "field_weight": [
+        {
+            "value": 4
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/eck\/entity\/footer_logos\/1?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/footer_logos\/footer_logo"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/footer_logos\/footer_logo\/field_footer_logo": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2017-08\/us-dept-of-the-interior.png"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 1
+        }
+    ],
+    "uuid": [
+        {
+            "value": "38b057c0-96af-4cc7-8d4b-99e86b4fbdf7"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "footer_logo"
+        }
+    ],
+    "title": [
+        {
+            "value": "US Department of Interior Indian Affairs",
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/footer_logos\/footer_logo\/field_footer_logo": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2017-08\/us-dept-of-the-interior.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "996d5ffd-f4c2-48a9-abcc-ebc38473af42"
+                    }
+                ],
+                "uri": [
+                    {
+                        "value": "http:\/\/default\/sites\/default\/files\/2017-08\/us-dept-of-the-interior.png"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_footer_logo_link": [
+        {
+            "uri": "https:\/\/www.bia.gov\/",
+            "title": "",
+            "options": []
+        }
+    ],
+    "field_weight": [
+        {
+            "value": 0
+        }
+    ]
+}

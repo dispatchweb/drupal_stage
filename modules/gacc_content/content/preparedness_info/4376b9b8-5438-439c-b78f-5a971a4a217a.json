@@ -1,0 +1,74 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/eck\/entity\/preparedness_info\/11?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/preparedness_info\/preparedness_level"
+        }
+    },
+    "id": [
+        {
+            "value": 11
+        }
+    ],
+    "uuid": [
+        {
+            "value": "4376b9b8-5438-439c-b78f-5a971a4a217a"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "preparedness_level"
+        }
+    ],
+    "title": [
+        {
+            "value": "Southwest (SWCC)",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1508775834,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_level": [
+        {
+            "value": 1
+        }
+    ],
+    "field_lookup": [
+        {
+            "value": "SWC"
+        }
+    ],
+    "field_short_code": [
+        {
+            "value": "swcc"
+        }
+    ],
+    "field_url": [
+        {
+            "value": "https:\/\/gacc.nifc.gov\/swcc\/"
+        }
+    ],
+    "field_weight": [
+        {
+            "value": 0
+        }
+    ]
+}

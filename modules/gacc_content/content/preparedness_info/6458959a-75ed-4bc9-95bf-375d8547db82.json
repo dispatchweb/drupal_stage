@@ -1,0 +1,74 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/eck\/entity\/preparedness_info\/7?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/preparedness_info\/preparedness_level"
+        }
+    },
+    "id": [
+        {
+            "value": 7
+        }
+    ],
+    "uuid": [
+        {
+            "value": "6458959a-75ed-4bc9-95bf-375d8547db82"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "preparedness_level"
+        }
+    ],
+    "title": [
+        {
+            "value": "Northwest (NWCC)",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1508775797,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_level": [
+        {
+            "value": 2
+        }
+    ],
+    "field_lookup": [
+        {
+            "value": "NWCC"
+        }
+    ],
+    "field_short_code": [
+        {
+            "value": "nwcc"
+        }
+    ],
+    "field_url": [
+        {
+            "value": "https:\/\/gacc.nifc.gov\/nwcc\/"
+        }
+    ],
+    "field_weight": [
+        {
+            "value": 0
+        }
+    ]
+}

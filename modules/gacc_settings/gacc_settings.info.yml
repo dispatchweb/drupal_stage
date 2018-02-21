@@ -1,0 +1,11 @@
+name: GACC Settings
+type: module
+description: Set configuration parameters for this specific GACC site
+# core: 8.x
+package: Config
+configure: gacc_settings.admin_settings
+
+# Information added by Drupal.org packaging script on 2017-05-09
+version: '8.x-1.0'
+core: '8.x'
+project: 'gacc_settings'

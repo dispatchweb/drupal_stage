@@ -1,0 +1,70 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/16?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/gacc_map"
+        }
+    },
+    "id": [
+        {
+            "value": 16
+        }
+    ],
+    "uuid": [
+        {
+            "value": "9c72c971-a8c1-4359-b61a-dfb823062023"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 16
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "gacc_map"
+        }
+    ],
+    "info": [
+        {
+            "value": "Dark Blue Map",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1506460347,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1506460347
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_map_iframe_url": [
+        {
+            "value": "https:\/\/www.google.com\/maps\/embed\/v1\/place?q=place_id:ChIJF728Q4tKaYcRybXIKceceXE&key=AIzaSyAvJOqm--wJafe0w0QOhsfZdBPyPPqILOw"
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/eck\/entity\/preparedness_info\/9?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/preparedness_info\/preparedness_level"
+        }
+    },
+    "id": [
+        {
+            "value": 9
+        }
+    ],
+    "uuid": [
+        {
+            "value": "d3fa00d0-e0b4-48f1-bc31-2fa00c565f91"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "preparedness_level"
+        }
+    ],
+    "title": [
+        {
+            "value": "Southern Area (SACC)",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1508775815,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_level": [
+        {
+            "value": 2
+        }
+    ],
+    "field_lookup": [
+        {
+            "value": "SAC"
+        }
+    ],
+    "field_short_code": [
+        {
+            "value": "sacc"
+        }
+    ],
+    "field_url": [
+        {
+            "value": "https:\/\/gacc.nifc.gov\/sacc\/"
+        }
+    ],
+    "field_weight": [
+        {
+            "value": 0
+        }
+    ]
+}

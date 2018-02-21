@@ -1,0 +1,60 @@
+input[type="text"], input[type="email"], input[type="name"], input[type="password"], input[type="file"] {
+  box-sizing: border-box;
+  padding: .5em 1em;
+  font-size: 100%;
+  font-family: $font-family;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  width: 100%;
+  @include breakpoint($bp-medium, $no-query: '.no-mq') {
+    width: auto;
+  }
+  &:active, &:focus {
+    background: $white;
+  }
+}
+
+input::-webkit-input-placeholder,
+input:-moz-placeholder {
+  color: #3C3C3C;
+}
+
+
+// File Inputs
+#edit-managed-file-upload-button {
+  margin-left: 1em;
+}
+
+// Pasword Inputs 
+.password-strength {
+  width: 100%;
+  float: none;
+  padding-bottom: 1em;
+}
+.password-strength-title {
+  display: inline-block;
+  font-size: 0.8em;
+  padding-bottom: .8em;
+}
+.form-item .form-type-password {
+  padding-bottom: 1em;
+}
+div.password-confirm {
+  margin-top: 0;
+  font-size: 0.9em;
+  span {
+    font-weight: 700;
+  }
+  .ok {
+    color: lighten($valid, 10%);
+  }
+}
+div.form-item div.password-suggestions {
+  padding: 1em;
+  margin: 0.7em 0;
+  width: auto;
+  border: 0;
+  background: $white;
+  color: $black;
+  border-radius: 4px;
+}

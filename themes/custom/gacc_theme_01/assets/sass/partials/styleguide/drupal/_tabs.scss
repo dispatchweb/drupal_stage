@@ -1,0 +1,28 @@
+ul.tabs.primary {
+  border: 0;
+  display: block;
+  padding: 0;
+  margin: 0 0 1em 0;
+  li {
+    display: inline-block;
+    a {
+      padding: 0.5em 1.5em;
+      text-decoration: none;
+      @include border-radius(3px);
+      color: #222;
+      font-size: 90%;
+      font-weight: 700;
+      border: 1px solid #CCC;
+      display: block;
+      &:hover {
+        border: 1px solid #CCC;
+      }
+    }
+    &.active {
+      a {
+        @include box-shadow(3px,3px,4px,rgba(0,0,0,0.1),false);
+        border: 1px solid #CCC;
+      }
+    }
+  }
+}

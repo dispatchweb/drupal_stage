@@ -1,0 +1,28 @@
+.preface {
+ background: #fbfbfb;
+  margin: 0 auto;
+  padding: 1.75em 1em;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f4f4+0,f4f4f4+65,f4f4f4+65,ffffff+66,ffffff+100 */
+background: #f4f4f4;
+    background: -moz-linear-gradient(top,#F7F8FB 0%, #F7F8FB 65%, #F7F8FB 65%, #fff 66%, rgba(255, 255, 255, 0.92) 100%);
+    background: -webkit-linear-gradient(top, #F7F8FB 0%, #F7F8FB 65%, #F7F8FB 65%, #fff 66%, rgba(255, 255, 255, 0.92) 100%);
+    background: linear-gradient(to bottom,#f7f8fb 0%,#f7f8fb 65%,#f4f4f4 65%,#ffffff 66%,rgba(255, 255, 255, 0.92) 100%);
+    
+display: none;
+}
+
+
+.front .preface {
+  padding: 1em 1em;
+  display: block;
+  @include breakpoint($bp-medium, $no-query: '.no-mq') {
+    padding: 3em 1em;
+  }
+  #block-block-2 {
+    display: block;
+    border: 15px solid #fff;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  }
+  
+}
+

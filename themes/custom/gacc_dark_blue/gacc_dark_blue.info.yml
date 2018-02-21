@@ -1,0 +1,32 @@
+name: GACC Dark Blue Theme # Sub-Page-GBCC-Blue 
+type: theme
+description: 'A GACC Theme with a dark blue bar and an olive green accent color for Drupal 8.'
+core: 8.x
+version: 1.x
+package: Custom
+base theme: nicc
+regions:
+  branding: 'Branding'
+  primary_menu: 'Primary Menu'
+  breadcrumb: 'Breadcrumb'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  hero: 'Hero'
+  hero_left: 'Hero Left'
+  hero_right: 'Hero Right'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  footer_top_left: 'Footer Top Left'
+  footer_top_right: 'Footer Top Right'
+  footer_mid_left: 'Footer Middle Left'
+  footer_mid_center: 'Footer Middle Center'
+  footer_mid_right: 'Footer Middle Right'
+  footer_contact_left: 'Footer Contact Left'
+  footer_contact_right: 'Footer Contact Right'
+  footer_bottom_left: 'Footer Bottom Left'
+  footer_bottom_right: 'Footer Bottom Right'
+libraries:
+  - core/normalize
+  - gacc_dark_blue/assets
+libraries-override:
+#  core/modernizr: false

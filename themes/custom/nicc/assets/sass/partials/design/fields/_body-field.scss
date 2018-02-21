@@ -1,0 +1,19 @@
+.field--name-body, .field--name-field-header-text, .field--name-field-footer-text { 
+    @include breakpoint($bp-small-down, $no-query: '.no-mq') {
+        img.align-left, img.align-right {
+            display: block;
+            margin: 1rem 0;
+            float: none;
+        }
+    }
+    @include breakpoint($bp-small, $no-query: '.no-mq') {
+        img.align-left {
+            margin: 0 1rem 0 0;
+            display: inline-block;
+        }
+        img.align-right {
+            margin: 0 0 0 1rem;
+            display: inline-block;
+        }
+    }
+}

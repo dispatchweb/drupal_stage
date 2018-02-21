@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Wireframes---Sub-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sub-Page-2" transform="translate(-202.000000, -284.000000)" fill="#FFFFFF">
+            <g id="Sidebar" transform="translate(166.000000, 208.000000)">
+                <polygon id="Shape-Copy" transform="translate(38.974966, 80.817758) rotate(-90.000000) translate(-38.974966, -80.817758) " points="35.2893806 77.8427926 38.9749658 81.5203482 42.660551 77.8427926 43.7927242 78.9749658 38.9749658 83.7927242 34.1572074 78.9749658"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

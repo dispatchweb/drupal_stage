@@ -1,0 +1,93 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/12?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/footer_block"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/footer_block\/field_icon": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2017-08\/us-map_3.png"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 12
+        }
+    ],
+    "uuid": [
+        {
+            "value": "82cd1ef4-d649-4fd8-9452-a51f88ead9fc"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 12
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "footer_block"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1503034292,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1503034289
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/footer_block\/field_icon": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2017-08\/us-map_3.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "e512c700-b3ca-4c2f-a42d-8c6cf0d4b7d1"
+                    }
+                ],
+                "uri": [
+                    {
+                        "value": "http:\/\/default\/sites\/default\/files\/2017-08\/us-map_3.png"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_title": [
+        {
+            "value": "National 7-Day Significant Fire Potential"
+        }
+    ]
+}

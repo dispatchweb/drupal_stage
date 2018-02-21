@@ -1,0 +1,99 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/24?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/footer_block"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/footer_block\/field_icon": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2017-10\/us-map_3.png"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 24
+        }
+    ],
+    "uuid": [
+        {
+            "value": "6baab81e-e30d-44ad-a048-1590cd950d30"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 24
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "footer_block"
+        }
+    ],
+    "info": [
+        {
+            "value": "National Fuels & Fire Behavior Advisories Nf&fba",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1507659204,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1507659195
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/footer_block\/field_icon": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2017-10\/us-map_3.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "31ef51dc-3c55-4abf-96e9-9477cd336e94"
+                    }
+                ],
+                "uri": [
+                    {
+                        "value": "http:\/\/default\/sites\/default\/files\/2017-10\/us-map_3.png"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_title": [
+        {
+            "value": "National Fuels & Fire Behavior Advisories Nf&fba"
+        }
+    ]
+}

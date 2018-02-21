@@ -1,0 +1,145 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/home?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/basic_page"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/basic_page\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/basic_page\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 2
+        }
+    ],
+    "uuid": [
+        {
+            "value": "85e41f48-ebc1-4981-af4f-857f4de54fdc"
+        }
+    ],
+    "vid": [
+        {
+            "value": 7
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic_page"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Home",
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/basic_page\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c62caa32-4e18-4dc7-92c9-7071ebbad1c7"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/basic_page\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c62caa32-4e18-4dc7-92c9-7071ebbad1c7"
+                    }
+                ]
+            }
+        ]
+    },
+    "created": [
+        {
+            "value": 1502466873,
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1502912557,
+            "lang": "en"
+        }
+    ],
+    "promote": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": 1502912557
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra nunc a urna vulputate mollis. Maecenas varius, urna at commodo efficitur, libero purus semper nisi, in convallis magna lectus ac metus. Praesent eget turpis dui. Cras mollis consequat neque, eu gravida ex varius et. Proin tempor malesuada turpis, eget semper mi ornare quis. Proin fermentum eros a commodo bibendum. Vestibulum dapibus magna nisl, quis lacinia enim congue at. Nam ornare metus nec tortor ullamcorper, ac efficitur lectus fringilla. In pharetra, ligula vel commodo volutpat, magna libero bibendum sapien, a mattis odio risus a est. Sed non nisi ut magna molestie faucibus. Integer venenatis lacus ut imperdiet condimentum. Integer non diam eu lorem aliquam congue sit amet mattis erat. Curabitur diam dui, molestie sed lorem eu, auctor ultrices massa. Aliquam id lacus enim. Vestibulum elementum vulputate quam vitae vehicula. Vestibulum ac nulla cursus purus semper laoreet at vel lectus.<\/p>\r\n",
+            "format": "full_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

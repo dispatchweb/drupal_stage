@@ -1,0 +1,20 @@
+{
+  "name": "vs-drupal8-theme",
+  "version": "1.0.0",
+  "description": "Variant Studios theme for Drupal 8",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "es6-promise": "^4.1.0",
+    "gulp": "^3.9.1",
+    "gulp-shell": "0.6.3",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.4.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-gzip": "^1.4.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.1.0"
+  },
+  "license": "GPL-2.0"
+}

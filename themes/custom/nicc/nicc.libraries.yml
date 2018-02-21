@@ -1,0 +1,16 @@
+assets:
+  version: 1.x
+  css: 
+    theme:
+      assets/css/style.css: {}
+      assets/css/print.css: { media: print }
+  js:
+    assets/js/prod/jquery.collapse.js: {}
+    assets/js/prod/custom-collapse-divs.js: {}
+    assets/js/prod/modernizer.js: {}
+    assets/js/prod/scripts.js: {}
+    https://d3js.org/d3.v4.min.js: { external: true }
+    assets/js/prod/map.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

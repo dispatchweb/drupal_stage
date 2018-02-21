@@ -1,0 +1,99 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/25?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/footer_block"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/footer_block\/field_icon": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2017-10\/us-map_4.png"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 25
+        }
+    ],
+    "uuid": [
+        {
+            "value": "fc8d85b2-d90d-43f1-8f73-6ae66d6e92f1"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 25
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "footer_block"
+        }
+    ],
+    "info": [
+        {
+            "value": "National 7-Day Significant Fire Potential",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1507659317,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1507659294
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/footer_block\/field_icon": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2017-10\/us-map_4.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "8ac057c3-a60a-4cf3-9673-3b0df7beaea4"
+                    }
+                ],
+                "uri": [
+                    {
+                        "value": "http:\/\/default\/sites\/default\/files\/2017-10\/us-map_4.png"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_title": [
+        {
+            "value": "National 7-Day Significant Fire Potential"
+        }
+    ]
+}

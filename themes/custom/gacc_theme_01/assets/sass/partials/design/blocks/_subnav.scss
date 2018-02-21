@@ -1,0 +1,36 @@
+.block-menu-blockmain {
+  background: $side-bar;
+  border-radius: 3px;
+  padding: .5rem 1.5rem 1.5rem 1.5rem;
+  & > ul.menu {
+    margin: 0;
+  }
+  li {
+      padding-top: 1em;
+      line-height: 1.1em;
+      display: block;
+    a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      position: relative;
+      &:hover {
+        color: rgb(228, 228, 228);
+      }
+      &.is-active {
+        color: #fff;
+        &:before {
+          content: '';
+          display: inline-block;
+          background: url('../images/icons/arrow-white.png');
+          background: url('../images/icons/arrow-white.svg');
+          position: absolute;
+          width: 6px;
+          height: 10px;
+          left: -10px;
+          top: 4px;
+        }
+      }
+    } 
+  }
+}

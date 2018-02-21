@@ -1,0 +1,45 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  tr {
+    padding: 0;
+    &.odd {
+      background: none;
+    }
+    &.even {
+      background: none;
+    }
+  }
+  td {
+    padding: 0.5em .5em;
+    margin: 0;
+  }
+  tbody {
+  }
+  th {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: .5em;
+  }
+  thead th {
+    padding-bottom: 1.5em;
+  }
+}
+
+
+
+table.sticky-enabled, table.sticky-header {
+  thead {
+    th {
+      border-bottom: 3px solid $link;
+      padding: 1em 0 1em 2em;
+    }
+  }
+}
+
+a.tabledrag-handle .handle {
+    height: 22px;
+    margin: 0;
+    padding: 0.42em 0.5em;
+    width: 33px;
+}

@@ -1,0 +1,84 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/eck\/entity\/footer_logos\/2?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/footer_logos\/footer_logo"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/footer_logos\/footer_logo\/field_footer_logo": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2017-08\/U.S.%20Department%20Of%20The%20Interior%20Bureau%20Of%20Land%20Management.png"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 2
+        }
+    ],
+    "uuid": [
+        {
+            "value": "b7f98e8e-565e-4556-81d6-4e769c97f2d8"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "footer_logo"
+        }
+    ],
+    "title": [
+        {
+            "value": "U.S. Department Of The Interior Bureau Of Land Management",
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/footer_logos\/footer_logo\/field_footer_logo": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2017-08\/U.S.%20Department%20Of%20The%20Interior%20Bureau%20Of%20Land%20Management.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "1333a38a-dcfb-4e83-bbb8-5b218f9852d3"
+                    }
+                ],
+                "uri": [
+                    {
+                        "value": "http:\/\/default\/sites\/default\/files\/2017-08\/U.S.%20Department%20Of%20The%20Interior%20Bureau%20Of%20Land%20Management.png"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_footer_logo_link": [
+        {
+            "uri": "https:\/\/www.blm.gov\/",
+            "title": "",
+            "options": []
+        }
+    ],
+    "field_weight": [
+        {
+            "value": 2
+        }
+    ]
+}

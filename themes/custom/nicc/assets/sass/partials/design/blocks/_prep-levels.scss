@@ -1,0 +1,88 @@
+.nation-prep-level {
+    margin: 0 0 1rem 0;
+    @include breakpoint($bp-large, $no-query: '.no-mq') {
+        width: 100%;
+        margin: 0 auto 1rem auto;
+    }
+    padding: 1rem;
+    background: #355F4E;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    h3 {
+        margin: 0;
+        color: #FCFCFC;
+        font-weight: bold;
+        font-size: 1.1em;
+        @include breakpoint($bp-xlarge, $no-query: '.no-mq') { 
+            font-size: 1.3em;
+        }
+    }
+    p {
+        margin-bottom: 0;
+        color: #FCFCFC;
+        font-family: $font-family;
+    }
+}
+.nation-prep-levels {
+    //margin: 0 4rem 2rem 4rem;
+    @include breakpoint($bp-medium, $no-query: '.no-mq') {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+   // min-width: 320px;
+    
+    background-color: #F3F9F1;
+    padding: 1rem 1rem 1.5rem 1rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    @include clearfix;
+    h4 {
+        margin: 0;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+    }
+    .menu__list {
+        padding: 0;
+        clear: both;
+        a {
+          position: relative;
+          z-index: 1;
+          text-decoration: none;
+          color: inherit;
+          transition: all .2s ease-in;
+          &:hover {
+            color: #575757;
+            margin-left: 0.3rem;
+          }
+        }
+      }
+      .menu__row {
+        border-bottom: 1px solid #B5ABAB; 
+        position: relative;
+        float: left;
+        line-height: 1.2em;  
+        margin: -.9em 0 0 0;  
+        width: 100%;
+        text-align: left;
+        font-weight: 600;  
+      }
+      .menu__title {
+        padding-right: 3em;
+        display: block;
+        span {
+          margin:0;
+          position:relative;
+          top: 1.6em;
+          padding-right:5px; 
+          background-color: #F3F9F1;
+        }
+      }
+      .menu__data {  
+          padding:1px 0 1px 5px;
+          position:relative;
+          top:.4em;
+          left:1px;
+          float:right;
+          background-color: #F3F9F1;
+      }
+
+}

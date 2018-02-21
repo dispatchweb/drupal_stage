@@ -1,0 +1,264 @@
+#block-mainnavigation{
+  margin-top: .5rem; 
+  @include breakpoint($bp-large, $no-query: '.no-mq') {
+    margin-top: 0; 
+  }
+  a[href$=".pdf"],a[href$=".doc"],a[href$=".docx"],a[href$=".csv"],a[href$=".xls"] {
+    background: url('../images/icons/download.png') no-repeat right center;
+    background: url('../images/icons/download.svg') no-repeat right center;
+    padding-right: 20px;
+  }
+}
+.sf-accordion-toggle.sf-style-none {
+    text-align: right;
+    padding: .6rem .3rem .4rem 0;
+    background-color: #eee;
+}
+#superfish-main-toggle {
+  margin: 0 .5rem 0 0;
+    span {
+      background: url(../images/icons/mobile-nav.svg) no-repeat center center;
+      @include hide-text;
+      height: 26px;
+      width: 32px;
+      display: inline-block;
+    }
+    &.sf-expanded span{
+      background: url(../images/icons/mobile-nav_close.svg) no-repeat center center;
+    }
+}
+ul.sf-menu.menu > li > a {
+  color: $nav-txt;
+  text-align: right;
+  border-bottom: solid 1px #eee;
+  @include breakpoint(768px, $no-query: '.no-mq') {
+    border-bottom: none;
+  }
+}
+ul.sf-menu.menu {
+  text-transform: uppercase;
+  text-align: center;
+  @include breakpoint($bp-large, $no-query: '.no-mq') {
+    text-align: right;
+  }
+  margin: .8rem 0 0 0;
+  li { 
+    float: none; 
+    display: inline-block;
+    
+  }
+  a {
+      color: #ffccff;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 1em .65em; 
+    }
+  ul {
+     background: $nav-dropdown-bg;
+     text-align: left;
+     right: auto;
+      text-align: right;
+    li {
+      padding: .5em;
+      border-bottom: 1px solid $nav-dropdown-bg-border;
+      &:last-child {
+        border: none;
+      }
+      a {
+        color: #fcfcfc;
+        text-transform: none;
+        padding: .5em .8em;
+        transition: all .3s;
+        &:hover {
+          color: $nav-dropdown-text-hover;
+        }
+      }
+    }
+  }
+}
+ul.sf-menu.menu > ul {
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+}
+ul.sf-menu li:hover > ul,
+ul.sf-menu li.sfHover > ul {
+  left: auto;
+  top: 3.25rem;
+  @include breakpoint(768px, $no-query: '.no-mq') {
+    right: 15px;
+  }
+}
+ul.sf-menu.menu ul:after {
+    content:"";
+    position: absolute;
+    right: 0px;
+    top: -12px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 12px 12px 12px;
+    border-color: transparent transparent $nav-dropdown-bg transparent;
+    z-index:9998;
+}
+
+ul.sf-menu.menu span.sf-depth-1.menuparent {
+    display: block;
+    padding: 1em .8em;
+    position: relative;
+    color: #355F4E;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.main-nav-container {
+  background: #efefef;
+  border-bottom: 1px solid #efefef;
+  z-index: 10;
+  position: relative;
+  .main-nav {
+    @include breakpoint($bp-large) {
+      display: none;
+    }
+  }
+}
+
+.mm-menu {
+  @include breakpoint($bp-large, $no-query: '.no-mq') {
+    display: none;
+  }
+}
+
+#block-nicc-mainnavigation {
+  font-family: $heading-font-family;
+  padding: 0;
+  font-size: 110%;
+  @include clearfix;
+  display: none;
+  @include breakpoint($bp-large, $no-query: '.no-mq') {
+    font-size: 1.1em;
+    margin-top: 19px;
+    display: block;
+  }
+  @include breakpoint($bp-large, $no-query: '.no-mq') {
+    margin-top: 19px;
+  }
+  ul.menu {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    @include breakpoint($bp-large, $no-query: '.no-mq') {
+      margin: 0;
+    }
+  }
+  ul.menu li.leaf, ul.menu li, ul.menu li.expanded {
+    list-style: none;
+    padding:0;
+    margin: 0;
+    position: relative;
+    background: none;
+    @include breakpoint($bp-large, $no-query: '.no-mq') {
+      display: inline-block;
+    }
+    li {
+      padding: 0;
+      font-size: 85%;
+      border-bottom: 0;
+        margin: 0;
+
+    }
+  }
+  a, a:visited, span {
+    @include breakpoint($bp-large, $no-query: '.no-mq') {
+      text-decoration: none;
+    display: block;
+    margin: 0;
+    color: #2064AE !important;
+      cursor: pointer;
+      padding: 0 .35em;
+    }
+  }
+  .sf-menu.sf-style-white a {
+    border: 0;
+    border-right: 0;
+  }
+    
+  .sf-menu.sf-horizontal.sf-shadow ul, .sf-menu.sf-vertical.sf-shadow ul, .sf-menu.sf-navbar.sf-shadow ul ul {
+    background: #fafafa !important;
+    border-radius: 0;
+    padding: 0 !important;
+  }
+}
+// Menu Icon
+.hamburger-menu  {
+  position: absolute;
+  z-index: 10;
+  right: 2em;
+  @include breakpoint($bp-large, $no-query: '.no-mq') {
+    display: none;
+  }
+}
+$bar-width: 30px;
+$bar-height: 4px;
+$bar-spacing: 10px;
+
+.hamburger-menu {
+  position: absolute;
+  cursor: pointer;
+  right: 2em;
+  margin-top: 2em;
+  a {
+    display: block;
+    height: 30px;
+  }
+}
+
+.hamburger-menu .bar,
+.hamburger-menu .bar:after,
+.hamburger-menu .bar:before {
+  width: $bar-width;
+  height: $bar-height;
+}
+
+.hamburger-menu .bar {
+  position: relative;
+  transform: translateY($bar-spacing);
+  background: $black;
+  transition: all 0ms 300ms;
+}
+
+.hamburger-menu .bar:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: $bar-spacing;
+  background: $black;
+  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu .bar:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: $bar-spacing;
+  background: $black;
+  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+// MMenu Overrides
+.mm-menu.wrap {
+  margin: 0;
+  .mm-title {
+    padding: .5em 0;
+    color: #fff !important;
+    font-size: 0.9em;
+  }
+  .mm-navbar {
+    height: 50px;
+    line-height: 30px;
+  }
+  .login-link-mobile {
+    margin: 0;
+  }
+}
+.mm-panels>.mm-panel>.mm-listview:first-child, .mm-panels>.mm-panel>.mm-navbar+.mm-listview {
+  margin-top: -10px;
+}

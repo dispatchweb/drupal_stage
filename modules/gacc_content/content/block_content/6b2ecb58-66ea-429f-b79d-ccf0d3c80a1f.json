@@ -1,0 +1,80 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/14?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/contact_block"
+        }
+    },
+    "id": [
+        {
+            "value": 14
+        }
+    ],
+    "uuid": [
+        {
+            "value": "6b2ecb58-66ea-429f-b79d-ccf0d3c80a1f"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 14
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "contact_block"
+        }
+    ],
+    "info": [
+        {
+            "value": "Great Basin Coordination Center",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1506460044,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1506460044
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_contact_address": [
+        {
+            "value": "401 Jimmy Doolittle Road,   \r\nSalt Lake City, UT  84116"
+        }
+    ],
+    "field_contact_faq": [
+        {
+            "value": "801.531.5321"
+        }
+    ],
+    "field_contact_phone": [
+        {
+            "value": "801.531.5320"
+        }
+    ]
+}

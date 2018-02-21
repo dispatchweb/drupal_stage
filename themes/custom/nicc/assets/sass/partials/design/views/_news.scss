@@ -1,0 +1,103 @@
+// MAIN VIEW NEWS PAGE/BLOCK
+.all-news-block-content .news-row {
+    @include clearfix;
+    border-bottom: 1px solid #e0e0e0;
+    .left {
+        @include breakpoint($bp-medium, $no-query: '.no-mq') {
+            @include grid-span(4,1,$gutter:1);
+          }
+    }
+    .right {
+        @include breakpoint($bp-medium, $no-query: '.no-mq') {
+            @include grid-span(8,5,$gutter:1);
+          }
+    }
+    img {
+        margin: 1.7rem 0 0 0;
+    }
+    h4.news-title {
+        font-weight: 600;
+        margin: 1.4rem 0 .1rem 0;
+        font-size: 1.5rem;
+        a {
+            color: $link;
+        }
+    }
+    p.news-date {
+        margin-bottom: 0rem;
+        color: #6E6E6E;
+        font-size: .9rem;
+    }
+    .news-body {
+        margin: .5rem 0 1rem 0;
+    }
+}
+
+
+//FULL NODE NEWS
+article.full-node--news {
+    .news-date {
+        margin-bottom: 1rem;
+        color: #6E6E6E;
+        font-size: .9rem;
+        font-style: italic;
+    }
+}
+
+
+
+//FRONT NEWS BLOCK
+.latest-news-block-content {
+    h4.news-title {
+        margin: 0;
+        font-weight: normal;
+        font-size: 1.2em;
+        margin: 0;
+    }
+    p.news-date {
+        margin-bottom: .5rem;
+    }
+    p.more-news {
+        text-align: right;
+    }
+}
+
+// RECENT NEWS BLOCK
+.recent-news-block-content {
+    background: $side-bar;
+    padding: 1.5rem;
+    border-radius: 3px;
+    color: #fff;
+    a, a:visited {
+        color: #fff;
+    }
+    a:hover, a:active, a:visited:hover {
+        color: darken(#fff, 10%);
+        text-decoration: underline; 
+    }
+    h2 {
+        color: #fff;
+        margin-top: 0;
+    }
+    h4.news-title {
+        margin: 0;
+        font-weight: 600;
+        font-size: 1.2em;
+        margin: 0;
+    }
+    p.news-date {
+        margin-bottom: .5rem;
+        color: #CCCCCC;
+        font-size: .8rem;
+        font-style: italic;
+    }
+    p.more-news {
+        text-align: right;
+        margin: 0;
+        font-size: .8rem;
+        a:hover, a:active, a:visited:hover {
+            text-decoration: none; 
+            color: darken(#fff, 10%);
+        }
+    }
+}

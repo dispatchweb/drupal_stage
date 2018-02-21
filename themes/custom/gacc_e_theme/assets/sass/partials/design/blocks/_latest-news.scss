@@ -1,0 +1,40 @@
+.latest-news-block, .block-views-blocknews-block-1 {
+    width: 350px;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #F3F9F1;
+    padding: 1rem 1rem 1rem 1.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    @include clearfix;
+    h3 {
+        margin: 0 0 1rem 0;
+        color: #5C7852; // Secondary color
+        text-transform: uppercase;
+    }
+    h4 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 1.2em;
+        margin-bottom: 1rem;
+        a {
+            text-decoration: none;
+            color: #272727;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    p {
+        margin-bottom: .2rem;
+        color: #595959;
+        font-style: italic;
+        font-size: .8em;
+    }
+    div.view-footer {
+        text-align: right;
+        a {
+            text-decoration: none;
+            color: #595959;
+        }
+    }
+}

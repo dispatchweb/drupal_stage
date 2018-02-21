@@ -1,0 +1,54 @@
+
+.js .custom-select {
+  position: relative;
+  padding: 0;
+  display: inline-block;
+  width: 100%;
+background: #f3f3f3; /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  @include breakpoint($bp-small, $no-query: '.no-mq') {
+      width: 250px;
+    }
+  // &:before {
+  //   content: '';
+  //   background: url('../images/icons/select.png') no-repeat;
+  //   position: absolute;
+  //   width: 9px;
+  //   height: 16px;
+  //   right: 15px;
+  //   top: 18px;
+  // }
+  select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    display: inline-block;
+    padding: 1em 3em 1em 1.5em;
+    border-radius: 3px;
+    border: 1px solid #CBCBCB;
+    font-family: $font-family;
+    font-size: 0.8em;
+    color: #333;
+    width: 100%;
+    background: none;
+    background-image: url('../images/icons/select.png');
+    background-repeat: no-repeat;
+        background-position: 97% 14px;
+    
+  }
+  select::-ms-expand {
+    display: none;
+  }
+}
+
+.ie9-and-lower {
+  .custom-select {
+    &:before {
+      content: '';
+      background: none;
+    }
+  }
+}

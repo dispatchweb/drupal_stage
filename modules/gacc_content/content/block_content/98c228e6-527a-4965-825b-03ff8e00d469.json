@@ -1,0 +1,93 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/11?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/footer_block"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/footer_block\/field_icon": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2017-08\/us-map_2.png"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 11
+        }
+    ],
+    "uuid": [
+        {
+            "value": "98c228e6-527a-4965-825b-03ff8e00d469"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 11
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "footer_block"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1505834291,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1503034245
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/footer_block\/field_icon": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2017-08\/us-map_2.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "d6a2716a-8752-4d4e-b575-627118c33bb5"
+                    }
+                ],
+                "uri": [
+                    {
+                        "value": "http:\/\/default\/sites\/default\/files\/2017-08\/us-map_2.png"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_title": [
+        {
+            "value": "National Fuels & Fire Behavior Advisories"
+        }
+    ]
+}

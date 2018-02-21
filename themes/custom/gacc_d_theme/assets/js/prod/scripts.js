@@ -1,0 +1,1 @@
+!function(u,o){"use strict";console.log("sub")}(jQuery,Drupal);

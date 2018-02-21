@@ -1,0 +1,27 @@
+.breadcrumb {
+  max-width: $container_width;
+  margin: 0 auto;
+  padding: 0 1em;
+  font-size: 90%;
+  @include breakpoint($bp-medium, $no-query: '.no-mq') {
+    padding: 0 2em;
+  }
+  a {
+    text-decoration: none;
+    padding: 0;
+    color: $link;
+    &:visited {
+      color: $link;
+    }
+  }
+  span {
+    display: inline-block;
+    padding: 0 0.25em;
+  }
+}
+
+.breadcrumbs {
+  background: #fafafa;
+  padding: 1em 0;
+  border-bottom: 1px solid #e0e0e0;
+}

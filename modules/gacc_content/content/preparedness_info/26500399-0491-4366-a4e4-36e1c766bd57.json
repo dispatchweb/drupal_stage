@@ -1,0 +1,74 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/eck\/entity\/preparedness_info\/6?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/preparedness_info\/preparedness_level"
+        }
+    },
+    "id": [
+        {
+            "value": 6
+        }
+    ],
+    "uuid": [
+        {
+            "value": "26500399-0491-4366-a4e4-36e1c766bd57"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "preparedness_level"
+        }
+    ],
+    "title": [
+        {
+            "value": "Northern Rockies (NRCC)",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1508775785,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_level": [
+        {
+            "value": 2
+        }
+    ],
+    "field_lookup": [
+        {
+            "value": "NRC"
+        }
+    ],
+    "field_short_code": [
+        {
+            "value": "nrcc"
+        }
+    ],
+    "field_url": [
+        {
+            "value": "https:\/\/gacc.nifc.gov\/nrcc\/"
+        }
+    ],
+    "field_weight": [
+        {
+            "value": 0
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+.footer-contact {
+    background-color: $footer-contact; // main color
+    padding: 3rem 0;
+    .footer-contact--left {
+        color: #fff;
+        h2 {
+            color: #fff;
+            margin-top: 0;
+        }
+        .field--name-field-contact-address {
+            @include breakpoint($bp-medium, $no-query: '.no-mq') {
+                float: left;
+                margin-right: 1rem;
+            }
+        }
+        .contact-numbers {
+            
+        }
+        @include breakpoint($bp-medium, $no-query: '.no-mq') {
+            @include grid-span(5,2);
+        }
+    }
+    .footer-contact--right .field {
+        text-align: center;
+        a {
+            background-color: $footer-contact-button; // secondary color
+            border: 1px solid lighten($footer-contact-button, 10);  // secondary color (lighten)
+            border-radius: 6px;
+            padding: 1rem 5rem 1rem 3.5rem;
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+            position: relative;
+            text-align: left;
+            transition: all .3s;
+            &:before {
+                font-size: 30px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 40px;
+                border-radius: 0 6px 6px 0;
+                content: '';
+                background: darken($footer-contact-button, 10) url('../images/icons/arrow-white.svg') no-repeat center center;
+            }
+            &:hover {
+                border: 1px solid lighten($footer-contact-button, 40);
+                padding: 1rem 4rem 1rem 2rem;
+            }
+        }
+        @include breakpoint($bp-medium, $no-query: '.no-mq') {
+            @include grid-span(6,7);
+        }
+    }
+}

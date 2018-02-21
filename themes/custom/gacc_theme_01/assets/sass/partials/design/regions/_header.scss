@@ -1,0 +1,60 @@
+header.site-header {
+  @include clearfix;
+  position: relative;
+  background: $nav-bg;
+  //box-shadow: 0 2px 4px 0 rgba(98,98,98,0.20);
+  padding: .5em 0 0 0;
+  @include breakpoint($bp-medium, $no-query: '.no-mq') {
+    padding: .5em 0 .5em;
+    z-index: 11;
+  }
+}
+
+.region--primary-menu {
+  @include breakpoint($bp-large, $no-query: '.no-mq') {
+    @include grid-span(8,5);
+  }
+}
+.region--branding {
+  @include breakpoint($bp-large, $no-query: '.no-mq') {
+    @include grid-span(4,1);
+  }
+  .logo {
+    text-decoration: none;
+    img { 
+      height: 55px;
+      margin: 0 1em; 
+    }
+    padding: 0;
+    @include breakpoint($bp-large, $no-query: '.no-mq') {
+      width: auto;
+      //display: inline-block;
+    }
+  }
+}
+#block-nicc-branding {
+  text-align: center;
+  padding: 0 .5rem;
+  @include breakpoint($bp-large, $no-query: '.no-mq') {
+  text-align: left;
+  padding: 0;
+  }
+}
+
+a.site-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  color: $site-name;
+  transition: all .3s ease-in;
+    &:hover {
+      color: $site-name-hover;
+    }
+  line-height: 1.2em;
+  vertical-align: top;
+  @include breakpoint($bp-large, $no-query: '.no-mq') {
+    width: 238px;
+    font-size: 1.5rem;
+  }
+}

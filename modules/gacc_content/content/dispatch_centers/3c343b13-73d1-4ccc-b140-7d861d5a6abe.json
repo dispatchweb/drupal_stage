@@ -1,0 +1,50 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/eck\/entity\/dispatch_centers\/1?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/dispatch_centers\/dispatch_center"
+        }
+    },
+    "id": [
+        {
+            "value": 1
+        }
+    ],
+    "uuid": [
+        {
+            "value": "3c343b13-73d1-4ccc-b140-7d861d5a6abe"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "dispatch_center"
+        }
+    ],
+    "title": [
+        {
+            "value": "Boise Dispatch",
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_dispatch_center_url": [
+        {
+            "uri": "https:\/\/www.idahofireinfo.blm.gov\/southwest\/",
+            "title": "",
+            "options": []
+        }
+    ]
+}

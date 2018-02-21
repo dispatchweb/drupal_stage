@@ -1,0 +1,19 @@
+.map--wrapper {
+    background: url(../images/topo_bg.png) no-repeat top center;
+    @include clearfix;
+    padding: 2rem 0;
+}
+.map--wrapper .left {
+    @include breakpoint($bp-medium, $no-query: '.no-mq') {
+        @include grid-span(4,1);
+      }
+
+}
+.map--wrapper .right {
+    @include breakpoint($bp-medium, $no-query: '.no-mq') {
+        @include grid-span(8,5);
+        .field--name-field-map-iframe-url {
+            padding-right: 40px;
+        }
+      }
+}

@@ -1,0 +1,22 @@
+input[type="submit"] {
+  @include btn($link, #fff, darken($link, 5%), 3px, 85%);
+  font-family: $font-family;
+  display: inline-block;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.20);
+}
+
+input#edit-reset[type="submit"] {
+  @include btn($error, #fff, darken($error, 5%), 3px, 85%);
+  font-family: $font-family;
+  display: inline-block;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.20);
+}
+
+
+.form-actions {
+  a {
+    display: inline-block;
+    margin-left: 1em;
+  }
+}
+

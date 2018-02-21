@@ -1,0 +1,50 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/eck\/entity\/dispatch_centers\/2?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/dispatch_centers\/dispatch_center"
+        }
+    },
+    "id": [
+        {
+            "value": 2
+        }
+    ],
+    "uuid": [
+        {
+            "value": "c2333b3a-96e4-433a-a56d-59e93e2bc017"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "dispatch_center"
+        }
+    ],
+    "title": [
+        {
+            "value": "Central Idaho IFC",
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_dispatch_center_url": [
+        {
+            "uri": "https:\/\/gacc.nifc.gov\/gbcc\/dispatch\/id-cic\/",
+            "title": "",
+            "options": []
+        }
+    ]
+}

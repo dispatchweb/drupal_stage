@@ -1,0 +1,436 @@
+diff --git a/field_group.module b/field_group.module
+index e85c489..7a851e4 100644
+--- a/field_group.module
++++ b/field_group.module
+@@ -174,10 +174,9 @@ function field_group_form_alter(array &$form, FormStateInterface $form_state) {
+       );
+ 
+       field_group_attach_groups($form, $context);
+-      $form['#pre_render'][] = 'field_group_form_pre_render';
++      $form['#process'][] = 'field_group_form_process';
+     }
+   }
+-
+ }
+ 
+ /**
+@@ -195,7 +194,7 @@ function field_group_inline_entity_form_entity_form_alter(&$entity_form, FormSta
+   ];
+ 
+   field_group_attach_groups($entity_form, $context);
+-  $entity_form['#pre_render'][] = 'field_group_form_pre_render';
++  $entity_form['#process'][] = 'field_group_form_process';
+ }
+ 
+ /**
+@@ -233,15 +232,14 @@ function field_group_entity_view_alter(&$build, EntityInterface $entity, EntityD
+ }
+ 
+ /**
+- * Pre render callback for rendering groups.
+- * @see field_group_field_attach_form
+- * @param $element Form that is being rendered.
++ * Process callback for field groups.
++ *
++ * @param array $element Form that is being processed.
++ *
++ * @return array
+  */
+-function field_group_form_pre_render($element) {
+-  if (empty($element['#field_group_form_pre_render'])) {
+-    $element['#field_group_form_pre_render'] = TRUE;
+-    field_group_build_entity_groups($element, 'form');
+-  }
++function field_group_form_process(array &$element) {
++  field_group_build_entity_groups($element, 'form');
+   return $element;
+ }
+ 
+@@ -258,7 +256,7 @@ function field_group_entity_view_pre_render($element) {
+ /**
+  * Implements hook_field_group_pre_render().
+  *
+- * @param Array $element
++ * @param array $element
+  *   Group beïng rendered.
+  * @param Object $group
+  *   The Field group info.
+@@ -307,8 +305,8 @@ function field_group_field_group_build_pre_render_alter(& $element) {
+   if ($display) {
+     field_group_remove_empty_display_groups($element, $groups);
+   }
++  // Remove all empty groups on the form.
+   else {
+-    // Fix the problem on forms with additional settings.
+     field_group_remove_empty_form_groups('form', $element, $groups, $element['#fieldgroups'], $element['#entity_type']);
+   }
+ 
+@@ -346,7 +344,7 @@ function field_group_attach_groups(&$element, $context) {
+ /**
+  * Preprocess/ Pre-render callback.
+  *
+- * @see field_group_form_pre_render()
++ * @see field_group_form_process()
+  * @see field_group_theme_registry_alter
+  * @see field_group_fields_nest()
+  * @param $vars preprocess vars or form element
+@@ -384,7 +382,13 @@ function field_group_build_entity_groups(&$vars, $context = 'view') {
+   }
+ 
+   // Nest the fields in the corresponding field groups.
+-  field_group_fields_nest($element, $nest_vars, $context);
++  if ($context !== 'form' && isset($element['_field_layout'])) {
++    field_group_field_layout_fields_nest($element, $nest_vars, $context);
++  }
++  else {
++    field_group_fields_nest($element, $nest_vars, $context);
++  }
++
+ 
+   // Allow others to alter the pre_rendered build.
+   Drupal::moduleHandler()->alter('field_group_build_pre_render', $element);
+@@ -400,11 +404,21 @@ function field_group_build_entity_groups(&$vars, $context = 'view') {
+   }
+ 
+   // Put groups inside content if we are rendering an entity_view.
++  $render_key = field_group_get_content_element_key($context);
+   foreach ($element['#fieldgroups'] as $group) {
+     if (!empty($element[$group->group_name])) {
+-      $key = field_group_get_content_element_key($context);
+-      if (isset($vars[$key])) {
+-        $vars[$key][$group->group_name] = $element[$group->group_name];
++
++      if (isset($vars[$render_key])) {
++
++        // Field layout enabled? Place it in correct region of the _field_layout key.
++        if (isset($vars[$render_key]['_field_layout'])) {
++          $vars[$render_key]['_field_layout'][$group->region][$group->group_name] = $element[$group->group_name];
++        }
++        else {
++          $vars[$render_key][$group->group_name] = $element[$group->group_name];
++        }
++
++
+       }
+     }
+   }
+@@ -412,7 +426,7 @@ function field_group_build_entity_groups(&$vars, $context = 'view') {
+ }
+ 
+ /**
+- * Recursive function to nest fields in the field groups.
++ * Nests all the fields in the field groups.
+  *
+  * This function will take out all the elements in the form and
+  * place them in the correct container element, a fieldgroup.
+@@ -467,6 +481,7 @@ function field_group_fields_nest(&$element, &$vars = NULL, $context = NULL) {
+         $group_references[$parent_name][$child_name] = &$element[$child_name];
+         unset($element[$child_name]);
+       }
++
+     }
+     // Form being viewed
+     else {
+@@ -477,6 +492,10 @@ function field_group_fields_nest(&$element, &$vars = NULL, $context = NULL) {
+         // If this is a group, we have to use a reference to keep the reference
+         // list intact (but if it is a field we don't mind).
+         $group_references[$parent_name][$child_name] = &$element[$child_name];
++
++        // Remove the #group property, otherwise core will move this element to the field layout region.
++        unset($group_references[$parent_name][$child_name]['#group']);
++
+         $group_references[$parent_name]['#weight'] = $element['#fieldgroups'][$parent_name]->weight;
+       }
+ 
+@@ -495,6 +514,69 @@ function field_group_fields_nest(&$element, &$vars = NULL, $context = NULL) {
+ }
+ 
+ /**
++ * Nests all the fields in the field groups for entity display elements managed by field layout.
++ * @param $element
++ * @param null $vars
++ * @param null $context
++ */
++function field_group_field_layout_fields_nest(&$element, &$vars = NULL, $context = NULL) {
++
++  // Create all groups and keep a flat list of references to these groups.
++  $group_references = [];
++  foreach ($element['#fieldgroups'] as $group_name => $group) {
++    // Construct own weight, as some fields (for example preprocess fields) don't have weight set.
++    $element[$group_name] = [];
++    $group_references[$group_name] = &$element[$group_name];
++  }
++
++  // Loop through all children looking for those that are supposed to be
++  // in groups, and insert placeholder element for the new group field in the
++  // correct location within the form structure.
++  $element_clone = [];
++  foreach (Element::children($element['_field_layout']) as $region_name) {
++
++    foreach (Element::children($element['_field_layout'][$region_name]) as $child_name) {
++      $element_clone['_field_layout'][$region_name][$child_name] = $element['_field_layout'][$region_name][$child_name];
++      // If this element is in a group, create the placeholder element.
++      if (isset($element['_field_layout'][$region_name]['#group_children'][$child_name])) {
++        $element_clone['_field_layout'][$region_name][$element['#group_children'][$child_name]] = [];
++      }
++    }
++
++  }
++
++  $element = array_merge($element_clone, $element);
++
++  // Move all children to their parents. Use the flat list of references for
++  // direct access as we don't know where in the root_element hierarchy the
++  // parent currently is situated.
++  foreach ($element['#group_children'] as $child_name => $group_name) {
++
++    $region = $element['#fieldgroups'][$group_name]->region;
++
++    // If not a group, check the content variable for empty field.
++    $key = field_group_get_content_element_key($context);
++    if (!isset($element['#fieldgroups'][$child_name]) && isset($vars[$key]['_field_layout'][$region][$child_name])) {
++      $group_references[$group_name][$child_name] = $vars[$key]['_field_layout'][$region][$child_name];
++      unset($vars[$key]['_field_layout'][$region][$child_name]);
++    }
++    // If this is a group, we have to use a reference to keep the reference
++    // list intact (but if it is a field we don't mind).
++    else {
++      $group_references[$group_name][$child_name] = &$element[$child_name];
++      unset($element[$child_name]);
++    }
++
++  }
++
++  // Bring extra element wrappers to achieve a grouping of fields.
++  // This will mainly be prefix and suffix altering.
++  foreach ($element['#fieldgroups'] as $group_name => $group) {
++    field_group_pre_render($group_references[$group_name], $group, $element);
++  }
++}
++
++/**
+  * Function to pre render the field group element.
+  *
+  * @see field_group_fields_nest()
+@@ -719,14 +801,18 @@ function field_group_exists($group_name, $entity_type, $bundle, $context, $mode)
+ /**
+  * Remove empty groups on forms.
+  *
+- * @param String $parent_name
+- *   The name of the element.
++ * @param string $name
++ *   The name of current group.
+  * @param array $element
+  *   The element to check the empty state.
+  * @param array $groups
+- *   Array of group objects.
++ *   Array with group names.
++ * @param array $form_groups
++ *   Array with full group objects.
++ * @param $entity
++ *   Current entity type that is rendered.
+  */
+-function field_group_remove_empty_form_groups($name, & $element, $groups, &$form_groups, $entity) {
++function field_group_remove_empty_form_groups($name, & $element, $groups, &$form_groups, $entity_type) {
+ 
+   $exceptions = array('user__account', 'comment__author');
+ 
+@@ -737,9 +823,9 @@ function field_group_remove_empty_form_groups($name, & $element, $groups, &$form
+     foreach ($children as $childname) {
+ 
+       if (in_array($childname, $groups)) {
+-        field_group_remove_empty_form_groups($childname, $element[$childname], $groups, $form_groups, $entity);
++        field_group_remove_empty_form_groups($childname, $element[$childname], $groups, $form_groups, $entity_type);
+       }
+-      $exception = $entity . '__' . $childname;
++      $exception = $entity_type . '__' . $childname;
+       $hasChildren = $hasChildren ? TRUE : (isset($element[$childname]['#type']) || isset($element[$childname]['#markup']) || in_array($exception, $exceptions));
+ 
+     }
+diff --git a/src/Element/HtmlElement.php b/src/Element/HtmlElement.php
+index e58d6e1..c899a93 100644
+--- a/src/Element/HtmlElement.php
++++ b/src/Element/HtmlElement.php
+@@ -18,12 +18,16 @@ class HtmlElement extends RenderElement {
+   public function getInfo() {
+     $class = get_class($this);
+ 
+-    return array(
+-      '#process' => array(
+-        array($class, 'processHtmlElement'),
+-      ),
+-      '#theme_wrappers' => array('field_group_html_element'),
+-    );
++    return [
++      '#process' => [
++        [$class, 'processGroup'],
++        [$class, 'processHtmlElement'],
++      ],
++      '#pre_render' => [
++        [$class, 'preRenderGroup'],
++      ],
++      '#theme_wrappers' => ['field_group_html_element'],
++    ];
+   }
+ 
+   /**
+diff --git a/src/Plugin/field_group/FieldGroupFormatter/Fieldset.php b/src/Plugin/field_group/FieldGroupFormatter/Fieldset.php
+index ecbf217..d2a17b5 100644
+--- a/src/Plugin/field_group/FieldGroupFormatter/Fieldset.php
++++ b/src/Plugin/field_group/FieldGroupFormatter/Fieldset.php
+@@ -28,7 +28,6 @@ class Fieldset extends FieldGroupFormatterBase {
+     $element += array(
+       '#type' => 'fieldset',
+       '#title' => Html::escape($this->t($this->getLabel())),
+-      '#pre_render' => array(),
+       '#attributes' => array(),
+     );
+ 
+diff --git a/src/Plugin/field_group/FieldGroupFormatter/Tab.php b/src/Plugin/field_group/FieldGroupFormatter/Tab.php
+index 7cc8a64..7c81c77 100644
+--- a/src/Plugin/field_group/FieldGroupFormatter/Tab.php
++++ b/src/Plugin/field_group/FieldGroupFormatter/Tab.php
+@@ -34,6 +34,7 @@ class Tab extends FieldGroupFormatterBase {
+       '#type' => 'details',
+       '#title' => Html::escape($this->t($this->getLabel())),
+       '#description' => $this->getSetting('description'),
++      '#group' => $this->group->parent_name,
+     );
+ 
+     if ($this->getSetting('id')) {
+@@ -46,7 +47,7 @@ class Tab extends FieldGroupFormatterBase {
+     $classes = $this->getClasses();
+     if (!empty($classes)) {
+       $element += array(
+-        '#attributes' => array('class' => $classes),
++        '#attributes' => ['class' => $classes],
+       );
+     }
+ 
+@@ -54,13 +55,6 @@ class Tab extends FieldGroupFormatterBase {
+       $element['#open'] = TRUE;
+     }
+ 
+-    // Front-end and back-end on configuration will lead
+-    // to vertical tabs nested in a separate vertical group.
+-    if (!empty($this->group->parent_name)) {
+-      $add['#group'] = $this->group->parent_name;
+-      $add['#parents'] = array($add['#group']);
+-    }
+-
+     if ($this->getSetting('required_fields')) {
+       $element['#attached']['library'][] = 'field_group/formatter.tabs';
+       $element['#attached']['library'][] = 'field_group/core';
+@@ -77,28 +71,28 @@ class Tab extends FieldGroupFormatterBase {
+ 
+     $form = parent::settingsForm();
+ 
+-    $form['formatter'] = array(
++    $form['formatter'] = [
+       '#title' => $this->t('Default state'),
+       '#type' => 'select',
+       '#options' => array_combine($this->pluginDefinition['format_types'], $this->pluginDefinition['format_types']),
+       '#default_value' => $this->getSetting('formatter'),
+       '#weight' => -4,
+-    );
++    ];
+ 
+-    $form['description'] = array(
++    $form['description'] = [
+       '#title' => $this->t('Description'),
+       '#type' => 'textarea',
+       '#default_value' => $this->getSetting('description'),
+       '#weight' => -4,
+-    );
++    ];
+ 
+     if ($this->context == 'form') {
+-      $form['required_fields'] = array(
++      $form['required_fields'] = [
+         '#type' => 'checkbox',
+         '#title' => $this->t('Mark group as required if it contains required fields.'),
+         '#default_value' => $this->getSetting('required_fields'),
+         '#weight' => 2,
+-      );
++      ];
+     }
+ 
+     return $form;
+@@ -108,10 +102,10 @@ class Tab extends FieldGroupFormatterBase {
+    * {@inheritdoc}
+    */
+   public static function defaultContextSettings($context) {
+-    $defaults = array(
++    $defaults = [
+       'formatter' => 'closed',
+       'description' => '',
+-    ) + parent::defaultSettings($context);
++      ] + parent::defaultSettings($context);
+ 
+     if ($context == 'form') {
+       $defaults['required_fields'] = 1;
+diff --git a/src/Plugin/field_group/FieldGroupFormatter/Tabs.php b/src/Plugin/field_group/FieldGroupFormatter/Tabs.php
+index 4f49ec3..93029e0 100644
+--- a/src/Plugin/field_group/FieldGroupFormatter/Tabs.php
++++ b/src/Plugin/field_group/FieldGroupFormatter/Tabs.php
+@@ -28,6 +28,7 @@ class Tabs extends FieldGroupFormatterBase {
+    * {@inheritdoc}
+    */
+   public function preRender(&$element, $rendering_object) {
++
+     parent::preRender($element, $rendering_object);
+ 
+     $element += array(
+@@ -47,30 +48,42 @@ class Tabs extends FieldGroupFormatterBase {
+       $element['#title'] = Html::escape($this->getLabel());
+     }
+ 
+-    $form_state = new FormState();
+-
+     if ($this->getSetting('direction') == 'vertical') {
+ 
+       $element += array(
+         '#type' => 'vertical_tabs',
+         '#theme_wrappers' => array('vertical_tabs'),
+       );
+-      $complete_form = array();
+-      $element = VerticalTabs::processVerticalTabs($element, $form_state, $complete_form);
++
++      // View is not getting processed anymore.
++      if ($this->context === 'view') {
++        $form_state = new FormState();
++        $complete_form = array();
++        $element = VerticalTabs::processVerticalTabs($element, $form_state, $complete_form);
++      }
++
+     }
+     else {
+       $element += array(
+         '#type' => 'horizontal_tabs',
+         '#theme_wrappers' => array('horizontal_tabs'),
+       );
+-      $on_form = $this->context == 'form';
+-      $element = HorizontalTabs::processHorizontalTabs($element, $form_state, $on_form);
++
++      // View is not getting processed anymore.
++      if ($this->context === 'view') {
++        $form_state = new FormState();
++        $complete_form = array();
++        $element = HorizontalTabs::processHorizontalTabs($element, $form_state, $complete_form);
++      }
++
+     }
+ 
+-    // Make sure the group has 1 child. This is needed to succeed at form_pre_render_vertical_tabs().
+-    // Skipping this would force us to move all child groups to this array, making it an un-nestable.
+-    $element['group']['#groups'][$this->group->group_name] = array(0 => array());
+-    $element['group']['#groups'][$this->group->group_name]['#group_exists'] = TRUE;
++    if ($this->context === 'view') {
++      // Make sure the group has 1 child. This is needed to succeed at form_pre_render_vertical_tabs().
++      // Skipping this would force us to move all child groups to this array, making it an un-nestable.
++      $element['group']['#groups'][$this->group->group_name] = [0 => []];
++      $element['group']['#groups'][$this->group->group_name]['#group_exists'] = TRUE;
++    }
+ 
+     // Search for a tab that was marked as open. First one wins.
+     foreach (Element::children($element) as $tab_name) {

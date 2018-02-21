@@ -1,0 +1,7 @@
+gacc_settings.admin_settings:
+  path: '/admin/config/gacc_settings'
+  defaults:
+    _form: '\Drupal\gacc_settings\Form\ModuleConfigurationForm'
+    _title: 'GACC Settings configuration screen'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,12 @@
+assets:
+  version: 1.x
+  css: 
+    theme:
+      assets/css/style.css: {}
+      assets/css/print.css: { media: print }
+  js:
+    assets/js/prod/modernizer.js: {}
+    assets/js/prod/scripts.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

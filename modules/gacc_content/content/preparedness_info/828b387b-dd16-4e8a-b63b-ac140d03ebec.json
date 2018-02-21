@@ -1,0 +1,69 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/eck\/entity\/preparedness_info\/1?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/preparedness_info\/preparedness_level"
+        }
+    },
+    "id": [
+        {
+            "value": 1
+        }
+    ],
+    "uuid": [
+        {
+            "value": "828b387b-dd16-4e8a-b63b-ac140d03ebec"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "preparedness_level"
+        }
+    ],
+    "title": [
+        {
+            "value": "National (NICC)",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1508775721,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_level": [
+        {
+            "value": 4
+        }
+    ],
+    "field_lookup": [
+        {
+            "value": "NIC"
+        }
+    ],
+    "field_short_code": [
+        {
+            "value": "nicc"
+        }
+    ],
+    "field_weight": [
+        {
+            "value": -1
+        }
+    ]
+}

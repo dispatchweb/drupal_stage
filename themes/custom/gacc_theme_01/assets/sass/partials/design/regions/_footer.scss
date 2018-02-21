@@ -1,0 +1,95 @@
+footer {
+    // FOOTER TOP --------------------- //
+    a[href$=".pdf"],a[href$=".doc"],a[href$=".docx"],a[href$=".csv"],a[href$=".xls"] {
+        background: none;
+        padding-right: 0;
+      }
+    .footer-top {
+        background: #F8FCF4;
+        padding: 2rem 4rem;
+        h2 {font-size: 1.2em;}
+        .field--name-field-title {
+            font-weight: 600;
+        }
+        .field--name-field-icon {
+            display: block;
+            float: left;
+            margin-right: 2rem;
+        }
+        .field--name-body {
+            p {overflow: hidden;}
+        }
+    }
+    .region--footer-top-left {
+        border-right: none;
+        border-bottom: solid 1px #D3D3D3;
+        img { margin-right: 1.5rem; }
+        @include breakpoint($bp-medium, $no-query: '.no-mq') {
+            @include grid-span(6,1);
+            border-bottom: none;
+            padding-right: 3rem;
+        }
+    }
+    .region--footer-top-right {
+        @include breakpoint($bp-medium, $no-query: '.no-mq') {
+            @include grid-span(6,7);
+            padding-left: 2rem;
+            border-left: solid 1px #D3D3D3;
+        }
+    }
+
+    // FOOTER MIDDLE --------------------- //
+    .front-page-three-maps.view {
+        .map--row.views-row {
+            float: left;
+            width: 33.33333%;
+            &:hover {
+                box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+                //background: #F8F8F8;
+            }
+        }
+        .map--title {
+            text-align: center;
+            padding: 1rem 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            width: 100%;
+            a {
+                text-decoration: none;
+            }
+        }
+    } 
+        
+    // FOOTER BOTTOM --------------------- //
+    .footer-bottom {
+        background-color: #272727;
+        padding: 2rem;
+        @include clearfix;
+        .view-content {
+            text-align: center;
+            @include breakpoint($bp-large, $no-query: '.no-mq') {
+                text-align: left;
+            }
+            .logo img{
+                height: 55px;
+                padding-right: 1.5rem;
+            }
+        } 
+    }
+    .region--footer-bottom-left {
+        @include breakpoint($bp-large, $no-query: '.no-mq') {
+            @include grid-span(6,1);
+        }
+    }
+    .region--footer-bottom-right {
+        @include breakpoint($bp-large, $no-query: '.no-mq') {
+            @include grid-span(6,7);
+        }
+    }
+    
+}
+
+.field.field--name-field-title.field--type-string {
+    padding: 1rem 2rem;
+}

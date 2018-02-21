@@ -1,0 +1,12 @@
+////////////////////////
+// Base Import
+////////////////////////
+
+body {
+  margin: 0;
+  padding: 1em;
+  background-color: #fff;
+}
+
+@import 'partials/global/global';
+@import 'partials/styleguide/styleguide';

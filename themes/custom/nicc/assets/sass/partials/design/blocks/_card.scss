@@ -1,0 +1,181 @@
+.field--name-field-cards.field--type-entity-reference {
+  & .eck--card-wrapper {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 0;
+    }
+  @include breakpoint($bp-medium, $no-query: '.no-mq') {
+    -moz-column-count: 2;
+    -moz-column-gap: 0px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 0px;
+    column-count: 2;
+    column-gap: 0px;
+    & .eck--card-wrapper {
+      margin-bottom: 0;
+    }
+  }
+}
+a[href$=".pdf"],a[href$=".doc"],a[href$=".docx"],a[href$=".csv"],a[href$=".xls"] {
+  background: url('../images/icons/download.png') no-repeat right center;
+  background: url('../images/icons/download.svg') no-repeat right center;
+  padding-right: 20px;
+}
+.menu-block--main-subnav {
+  a[href$=".pdf"],a[href$=".doc"],a[href$=".docx"],a[href$=".csv"],a[href$=".xls"] {
+    background: url('../images/icons/download.png') no-repeat right center;
+    background: url('../images/icons/download.svg') no-repeat right center;
+    padding-right: 20px;
+  }
+}
+.eck--card-wrapper {
+  a[href$=".pdf"],a[href$=".doc"],a[href$=".docx"],a[href$=".csv"],a[href$=".xls"] {
+    background: url('../images/icons/download-dark.png') no-repeat right center;
+    background: url('../images/icons/download-dark.svg') no-repeat right center;
+    padding-right: 20px;
+  }
+}
+
+.eck--card {
+  .eck--card-title {
+    margin: 0;
+    a {
+      color: #060606;
+      margin: 0 0 .5rem 0;
+      display: block;
+      background: url('../images/icons/collapse-opened.png') no-repeat top right;
+      background: url('../images/icons/collapse-opened.svg') no-repeat top right;
+      padding-right: 25px;
+      &.closed {
+        background: url('../images/icons/collapse-closed.png') no-repeat top right;
+        background: url('../images/icons/collapse-closed.svg') no-repeat top right;
+      }
+    }
+  }
+  .field--name-field-description {
+    color: #060606;
+    margin: 0 0 .5rem 0;
+  }
+  .field--name-field-link a {
+    color: $link;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.field--name-field-footer-text {
+  margin-top: 1rem;
+}
+
+
+.collapseWrapper {
+  overflow: hidden;
+}
+
+.close {
+  background: url('../images/icons/collapse-opened.png') no-repeat top right;
+  background: url('../images/icons/collapse-opened.svg') no-repeat top right;
+  position: relative;
+  height: 25px;
+  display: block;
+  text-align: right;
+  background-color: #F3F5F7;
+  border-radius: 3px;
+  padding: 1.5rem 2rem;
+}
+
+.field--name-field-link.field--type-link {
+  padding: .5rem 2rem 0 2rem;
+}
+.eck--card-title {
+  padding: 0 2rem .2rem 2rem;
+  display: block;
+  color: $heading-color;
+}
+.field--name-field-description {
+  padding: 0 2rem 0 2rem;
+}
+
+// IMAGE CARD
+.field--name-field-card-image.field--type-image {
+  @include clearfix;
+  .field__item { margin: 0 0.5rem }
+  &.two .field__item:first-child {
+    width: 47.5%;
+    float: left;  
+    margin: 0 0 0 .5rem;
+  }
+  &.two .field__item:nth-child(2) {
+    width: 47.5%;
+    float: right; 
+    margin: 0 .5rem 0 0; 
+  }
+}
+.field--name-title .field__item{
+  font-weight: bold;
+  padding:  1rem 2rem .5rem 2rem;
+  font-size: 1.2rem;
+  color: lighten($heading-color,15%);
+}
+.field--name-field-card-image-link {
+  padding: .2rem 2rem 1rem 2rem; 
+}
+.field--type-link .field__item {
+  padding: .2rem 0;
+}
+
+a.collapseMore {
+  padding: 0 2rem 0 4.5rem;
+  display: block;
+  background: url("../images/icons/view-more.png") no-repeat left center;
+  background: url("../images/icons/view-more.svg") no-repeat 2rem center;
+  text-decoration: none;
+  transition: all .5s ease;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+
+.field__item.eck--card-wrapper > .eck--card{
+  border-radius: 3px;
+  background-color: #F3F5F7;
+  padding: 1rem 0 1.5rem 0;
+  box-shadow: 
+  -1px 0 0 0 #d2d2d2, 
+  -1px 0 0 0 #e6e6e6, 
+  1px 0 0 0 #d2d2d2, 
+  1px 0 0 0 #e6e6e6, 
+  0 -1px 0 0 #e8e8e8, 
+  0 1px 0 0 rgba(241, 241, 241, .3), 
+  0 1px 0 0 #b1b1b1;
+}
+
+
+// MEDIA FIELD 
+//field field--name-field-files field--type-entity-reference field--label-visually_hidden
+.field--name-field-files.field--type-entity-reference {
+  padding: .5rem 2rem 0 2rem;
+  a.collapseMore {
+    margin-left: -2rem;
+  }
+  .field--name-name.field__item {
+    display: none;
+  }
+  .field.field--name-field-media-file {
+    padding: .2rem 0; 
+    span {
+      background: none;
+      padding-left: 0;
+      display: inline-block;
+      min-height: auto;
+      a {
+        color: $link;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

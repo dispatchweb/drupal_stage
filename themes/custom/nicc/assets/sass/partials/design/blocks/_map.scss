@@ -1,0 +1,70 @@
+.map--wrapper {
+    background: url(../images/topo_bg.png) no-repeat top center;
+    background-size: cover;
+    @include clearfix;
+    padding: 1rem 0;
+}
+.map--wrapper .left {
+    padding: 0 1rem 2rem 1rem;
+    @include breakpoint($bp-large, $no-query: '.no-mq') {
+        @include grid-span(4,1);
+        padding: 0 0 0 1rem;
+      }
+      
+
+}
+.map--wrapper .right {
+    //height: 483px;
+    padding: 0 0 0 0;
+    @include breakpoint($bp-large, $no-query: '.no-mq') {
+       @include grid-span(8,5);
+       padding: 0 1rem 0 0;
+      }
+}
+
+.map--wrapper svg {
+    filter: drop-shadow(0px 9px 7px rgba(0, 0, 0, 0.2));
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.svg-map--wrapper {
+    height: 0;
+    padding-top: 58%;
+    position: relative;
+}
+
+.map--wrapper svg g path {
+    stroke: #1c6155;
+}
+
+.map--wrapper svg .state {
+    transform-origin: 50% 50%;
+    pointer-events: all;
+}
+div.tooltip {
+    position: absolute;
+    background-color: #104253;
+    color: #fff;
+    font-weight: bold;
+    padding: 3px 8px 3px 15px;
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(../images/flag.svg) no-repeat left top;
+    background-repeat: no-repeat;
+    height: 80px;
+    font-size: 12px;
+    pointer-events: none;
+}
+.feature {
+    cursor: none;
+}
+
+.map--wrapper svg .feature {
+
+    transition: all .4s cubic-bezier(.48,0,.12,1) 0ms;
+    &:hover {
+        stroke-width: 1.2px;
+        transform: scale(1.01);
+    }
+}

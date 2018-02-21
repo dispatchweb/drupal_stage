@@ -1,0 +1,26 @@
+a {
+  color: $link;
+  &:visited {
+    color: $visited;
+    &:hover {
+      color: $hover;
+    }
+  }
+  &:hover {
+    color: $hover;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a {
+    text-decoration: none;
+  }
+}
+
+a.read-more-link {
+  display: inline-block;
+  color: $link;
+  font-family: $heading-font-family;
+  font-size: 1.1em;
+  font-weight: 700;
+}

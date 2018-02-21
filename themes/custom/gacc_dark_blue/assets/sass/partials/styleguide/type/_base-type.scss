@@ -1,0 +1,42 @@
+html {
+  font: $font-weight #{$font-size + "%"}/#{$line-height} $font-family;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
+body {
+  color: $body-copy-color;
+}
+
+p {
+  margin: auto auto $indent-val;
+  // Conditonal Check For Paragraph Styling
+  @if $paragraph-vertical-whitespace == false {
+    & + p {
+      //siblings indentation
+      margin-top: -0.5em;
+    }
+  }
+}
+
+i { font-style: italic; }
+q { font-style: italic; }
+s { text-decoration: line-through;}
+small { font-size: $small; }
+strong {font-weight: bold;}
+u {text-decoration: underline;}
+blockquote { font-style: italic;}
+
+
+.alpha-pagination {
+  ul {
+    font-size: 1em;
+    li {
+      border: 0 !important; 
+      &.all {
+        padding: 0 1em;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

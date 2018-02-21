@@ -1,0 +1,36 @@
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.6em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.3em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1.1em; }
+
+// $Styles $Headings-Color
+// -------------------------------------//
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  color: $heading-color;
+  margin: $rem 0;
+  line-height: 1.1em;
+  font-weight: 400;
+}
+
+
+h2.styleguide {
+  background: #efefef;
+  padding: 1em;
+  margin: 5em 0 0;
+  font-weight: 700;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1.1em;
+}

@@ -1,0 +1,22 @@
+.menu-block--footer-nav {
+    ul.menu {
+        text-align: center;
+        margin-top: 1rem;
+        li {
+        display: inline-block;
+            margin-right: 1rem;
+            a {
+                color: #fff;
+                font-weight: 600;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+    @include breakpoint($bp-large, $no-query: '.no-mq') {
+        ul.menu {
+            text-align: right;
+            margin-top: 1rem;
+        }
+    }
+}

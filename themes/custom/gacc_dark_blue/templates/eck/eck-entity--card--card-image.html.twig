@@ -1,0 +1,22 @@
+<div {{ attributes.addClass('eck--card-image') }}>
+<!--    
+    field--name-title
+    field--name-field-card-image
+    field--name-field-card-image-link
+    -->
+    
+    <h4>{{ entity.title[0] }}</h4>
+
+    {% if entity.field_card_image[1] is not empty %}
+        <span class="card-image-one">
+            <a href="{{ entity.field_card_image_link[0]['#url'] }}" title="{{ entity.title[0] }}">{{ entity.field_card_image[0] }}</a>
+        </span>
+        <span class="card-image-two">
+            <a href="{{ entity.field_card_image_link[0]['#url'] }}" title="{{ entity.title[1] }}">{{ entity.field_card_image[1] }}</a>
+        </span>
+    {% else %}
+        <span class="card-image">
+            <a href="{{ entity.field_card_image_link[0]['#url'] }}" title="{{ entity.title[0] }}">{{ entity.field_card_image[0] }}</a>
+        </span>
+    {% endif %}
+</div>

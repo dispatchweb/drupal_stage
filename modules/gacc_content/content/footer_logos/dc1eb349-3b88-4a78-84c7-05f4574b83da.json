@@ -1,0 +1,84 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/structure\/eck\/entity\/footer_logos\/3?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/footer_logos\/footer_logo"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/footer_logos\/footer_logo\/field_footer_logo": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/2017-08\/National%20Park%20Service.png"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 3
+        }
+    ],
+    "uuid": [
+        {
+            "value": "dc1eb349-3b88-4a78-84c7-05f4574b83da"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "footer_logo"
+        }
+    ],
+    "title": [
+        {
+            "value": "National Park Service",
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/footer_logos\/footer_logo\/field_footer_logo": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/2017-08\/National%20Park%20Service.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "46cfef68-74a6-4da8-a39f-bd6cc3a958db"
+                    }
+                ],
+                "uri": [
+                    {
+                        "value": "http:\/\/default\/sites\/default\/files\/2017-08\/National%20Park%20Service.png"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_footer_logo_link": [
+        {
+            "uri": "https:\/\/www.nps.gov\/index.htm",
+            "title": "",
+            "options": []
+        }
+    ],
+    "field_weight": [
+        {
+            "value": 3
+        }
+    ]
+}

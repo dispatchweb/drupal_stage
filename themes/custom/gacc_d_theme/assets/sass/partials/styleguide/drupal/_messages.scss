@@ -1,0 +1,34 @@
+div.messages {
+  background-position: 16px 10px;
+  background-repeat: no-repeat;
+  border: 0;
+  line-height: 1.4;
+  margin: 0 2em 2em 2em;
+  padding: .75em 1em .75em 3.5em;
+  font-size: 100%;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.25);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  &.warning {
+    background-color: $warning;
+    background-image: url(../images/warning.png);
+  }
+  &.messages--status {
+    background-color: $valid;
+    background-image: url(../images/success.png);
+  }
+  &.status {
+    background-color: $valid;
+    background-image: url(../images/success.png);
+  }
+  &.error {
+    background-color: $error;
+    background-image: url(../images/error.png);
+  }
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
